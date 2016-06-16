@@ -1,0 +1,67 @@
+{
+  "name": "openframe-tangram",
+  "version": "0.2.2",
+  "description": "Openframe extension which adds support for maps via tangram-es",
+  "main": "extension.js",
+  "scripts": {
+    "install": "./install.sh",
+    "uninstall": "./uninstall.sh",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "lint": "./node_modules/.bin/eslint extension.js test/**",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "npm run lint && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "test-coveralls": "npm run lint && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && npm run coveralls"
+  },
+  "keywords": [
+    "maps",
+    "tangram",
+    "tangram-es",
+    "openframe",
+    "extension",
+    "format",
+    "openframe-extension",
+    "openframe-tangram"
+  ],
+  "author": {
+    "name": "Mapzen",
+    "url": "http://mapzen.com"
+  },
+  "contributors": [
+    {
+      "name": "Matt Blair",
+      "url": "https://twitter.com/matteblair"
+    },
+    {
+      "name": "Varun Talwar",
+      "url": "https://twitter.com/tallytalwar"
+    },
+    {
+      "name": "Karim Naaji",
+      "url": "https://twitter.com/karimnaaji"
+    },
+    {
+      "name": "Hannes Janetzek",
+      "url": "https://twitter.com/hjanetzek"
+    },
+    {
+      "name": "Patricio Gonzalez Vivo",
+      "url": "https://twitter.com/patriciogv"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "eslint": "^2.8.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangrams/Openframe-tangram"
+  },
+  "dependencies": {
+    "openframe-extension": "^0.1.0",
+    "debug": "^2.2.0"
+  }
+}
