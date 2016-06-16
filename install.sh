@@ -25,7 +25,7 @@ if [ $os == "Linux" ]; then
     if [ $arq == "armv7l" ]; then
         # on RaspberryPi 2 or higher
         echo "armv7l"
-        cp bin/tangram /usr/local/bin/
+        sudo cp bin/tangram /usr/local/bin/
 
     elif [ $arq == "armv6l" ]; then
         # on RaspberryPi 1 (A+, B+)
@@ -34,7 +34,7 @@ if [ $os == "Linux" ]; then
         git clone --depth=1 --recursive --branch=rpi_arguments git@github.com:tangrams/tangram-es.git tangram-es
         cd tangram-es
         make rpi
-        cp build/rpi/bin/tangram /usr/local/bin/
+        sudp cp build/rpi/bin/tangram /usr/local/bin/
     else
         # Non-arm7 Debian...
         echo "non armv7l"
