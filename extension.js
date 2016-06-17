@@ -27,19 +27,24 @@ module.exports = new Extension({
 
             var data = fs.readFileSync(_tokens['$filepath']);
             var scene = yaml.load(data);
-            console.log('scene',scene);
 
             if (scene.scene) {
+                console.log('SCENE: ', scene.scene);
                 if (scene.scene.zoom) {
+                    console.log('ZOOM: ', scene.scene.zoom);
                     command += ' -z ' + scene.scene.zoom;
                 }
                 if (scene.scene.tilt) {
+                    console.log('TILT: ', scene.scene.tilt);
                     command += ' -t ' + scene.scene.tilt;
                 }
+
                 if (scene.scene.lon) {
+                    console.log('LON: ', scene.scene.lon);
                     command += ' -lon ' + scene.scene.lon;
                 }
                 if (scene.scene.lat) {
+                    console.log('LAT: ', scene.scene.lat);
                     command += ' -lat ' + scene.scene.lat;
                 }
             }
@@ -49,7 +54,7 @@ module.exports = new Extension({
             if (config.h) {
                 command += ' -h ' + config.h;
             }
-            command += '-s $filepath';
+            command += ' -s $filepath';
             return command;
         },
         // how do we stop this type of artwork?
