@@ -38,7 +38,6 @@ module.exports = new Extension({
                     console.log('TILT: ', scene.scene.tilt);
                     command += ' -t ' + scene.scene.tilt;
                 }
-
                 if (scene.scene.lon) {
                     console.log('LON: ', scene.scene.lon);
                     command += ' -lon ' + scene.scene.lon;
@@ -46,6 +45,14 @@ module.exports = new Extension({
                 if (scene.scene.lat) {
                     console.log('LAT: ', scene.scene.lat);
                     command += ' -lat ' + scene.scene.lat;
+                }
+                if (scene.scene.rotation) {
+                    console.log('ROT: ', scene.scene.rotation);
+                    command += ' -r ' + scene.scene.rotation;
+                }
+                if (scene.scene.position) {
+                    console.log('LAT: ', scene.scene.lat);
+                    command += ' -lon ' + scene.scene.position[0] + ' -lat ' + scene.scene.position[1];
                 }
             }
             if (config.w) {
