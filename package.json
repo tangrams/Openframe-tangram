@@ -1,6 +1,6 @@
 {
   "name": "openframe-tangram",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Openframe extension which adds support for maps via tangram-es",
   "main": "extension.js",
   "scripts": {
