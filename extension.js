@@ -1,5 +1,6 @@
 var pjson = require('./package.json'),
     debug = require('debug')('openframe:tangram'),
+    yaml = require 'yaml-js',
     Extension = require('openframe-extension');
 
 /**
@@ -19,8 +20,12 @@ module.exports = new Extension({
         // how do start this type of artwork? currently two token replacements, $filepath and $url
         'start_command': function(_config) {
             debug('Artwork config: ', _config);
+
             var config = _config || {},
                 command = 'tangram -m ';
+
+            console.log(_config);
+
             if (config.w) {
                 command += ' -w ' + config.w;
             }

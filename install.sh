@@ -25,7 +25,7 @@ if [ $os == "Linux" ]; then
     if [ $arq == "armv7l" ]; then
         # on RaspberryPi 2 or higher
         echo "armv7l"
-        cp bin/tangram /usr/local/bin/
+        cp bin/tangram-armv7l /usr/local/bin/tangram
 
     elif [ $arq == "armv6l" ]; then
         # on RaspberryPi 1 (A+, B+)
