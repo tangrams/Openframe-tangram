@@ -27,7 +27,7 @@ Once the script finish you can push tangram maps to it.
 
 First you will need to create a Tangram Map scene file. For that you can use [**TangramPlay**](https://mapzen.com/tangram/play/). There are a lot of resources to learn about Tangram ```.yaml``` scene files. Probably the first place to start is the [tangram **documentation**](https://mapzen.com/documentation/tangram/). Once you are confortable with it you can use [tangram **blocks**](http://tangrams.github.io/blocks/).
 
-![](imgs/01.png) 
+![](imgs/02.png) 
 
 Take a screenshot
 
