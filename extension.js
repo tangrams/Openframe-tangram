@@ -1,7 +1,8 @@
 var pjson = require('./package.json'),
     debug = require('debug')('openframe:tangram'),
-    yaml = require('yaml-js'),
-    Extension = require('openframe-extension');
+    Extension = require('openframe-extension'),
+    fs = require('fs'),
+    yaml = require('yaml-js');
 
 /**
  * Extensions should expose an instance of the Extension class.
@@ -18,14 +19,29 @@ module.exports = new Extension({
         // does this type of artwork need to be downloaded to the frame?
         'download': true,
         // how do start this type of artwork? currently two token replacements, $filepath and $url
-        'start_command': function(_config) {
+        'start_command': function(_config, _tokens) {
             debug('Artwork config: ', _config);
 
-            var config = _config || {},
-                command = 'tangram -m ';
+            var config = _config || {};
+            var command = 'tangram -m ';
 
-            console.log("CONFIG:", _config);
+            var data = fs.readFileSync(tokens['$filepath']);
+            var scene = yaml.load(data);
 
+            if (scene.scene) {
+                if (scene.scene.zoom) {
+                    command += ' -z ' + scene.scene.zoom;
+                }
+                if (scene.scene.tilt) {
+                    command += ' -t ' + scene.scene.tilt;
+                }
+                if (scene.scene.lon) {
+                    command += ' -lon ' + scene.scene.lon;
+                }
+                if (scene.scene.lat) {
+                    command += ' -lat ' + scene.scene.lat;
+                }
+            }
             if (config.w) {
                 command += ' -w ' + config.w;
             }
