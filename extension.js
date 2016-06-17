@@ -24,7 +24,7 @@ module.exports = new Extension({
             var config = _config || {},
                 command = 'tangram -m ';
 
-            console.log(_config);
+            console.log("CONFIG:", _config);
 
             if (config.w) {
                 command += ' -w ' + config.w;
