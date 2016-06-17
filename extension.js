@@ -25,8 +25,9 @@ module.exports = new Extension({
             var config = _config || {};
             var command = 'tangram -m ';
 
-            var data = fs.readFileSync(tokens['$filepath']);
+            var data = fs.readFileSync(_tokens['$filepath']);
             var scene = yaml.load(data);
+            console.log('scene',scene);
 
             if (scene.scene) {
                 if (scene.scene.zoom) {
