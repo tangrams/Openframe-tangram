@@ -33,7 +33,7 @@ Once you have it you need to put it the `.yaml` file and the screenshot somewher
 
 Then enter to your [openFrame.io account](http://openframe.io) and click on **"Add artwork"**.
 
-![](imgs/00.gif) 
+![](imgs/01.png) 
 
 Fill the values with your Name and Title of the map. In the format section choose **Other** and then specify the format as ```openframe-tangram```.
 
