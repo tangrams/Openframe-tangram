@@ -1,6 +1,6 @@
 var pjson = require('./package.json'),
     debug = require('debug')('openframe:tangram'),
-    yaml = require 'yaml-js',
+    yaml = require('yaml-js'),
     Extension = require('openframe-extension');
 
 /**
