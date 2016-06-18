@@ -53,3 +53,12 @@ Then you need to provide the urls for the Tangram ```.yaml``` scene file and the
 
 Publish it and share with others. Also let us know how it went! We are excited to see what have you done!
 
+## Choosing a location, zoom, tilt and rotation for your map
+
+[Tangram scene files](https://mapzen.com/documentation/tangram/Scene-file/) are designed to display maps in general, but as an artwork you probably want to pick a particular place and view. That's why I extend the official [Tangram scene file API](https://mapzen.com/documentation/tangram/Scene-file/) with a couple of variables inside the `scene` node to pick a: `position` (in longitud and latitud), `zoom` (zoom level), `rotation` (in degrees) and `tilt` (in degrees).
+
+![](imgs/06.png)
+
+![](imgs/07.gif)
+
+**Note**: This are not official values, so will not work any where else beside [openFrame.io](http://openframe.io) and my change in the future.
