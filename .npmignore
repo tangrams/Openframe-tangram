@@ -2,3 +2,4 @@
 .eslintrc.yml
 .jsbeautifyrc
 test/*
+imgs/*

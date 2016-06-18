@@ -25,19 +25,31 @@ Once the script finish you can push tangram maps to it.
 
 ## How add Tangram Maps as artworks
 
-First you will need to create a Tangram Map scene file. For that you can use [**TangramPlay**](https://mapzen.com/tangram/play/). There are a lot of resources to learn about Tangram ```.yaml``` scene files. Probably the first place to start is the [tangram **documentation**](https://mapzen.com/documentation/tangram/). Once you are confortable with it you can use [tangram **blocks**](http://tangrams.github.io/blocks/).
+First you will need to create a Tangram Map scene file. For that you can use [**TangramPlay**](https://mapzen.com/tangram/play/). There you can code your Tangram scene file. 
 
 ![](imgs/02.png) 
 
-Take a screenshot
+**Note**: There are a lot of resources to learn about how to make Tangram ```.yaml``` scene files. The first place to start learning is [this tangram **documentation**](https://mapzen.com/documentation/tangram/). Once you are confortable with the structure of the scene files you can use and remix this [tangram **blocks**](http://tangrams.github.io/blocks/).
 
-Once you have it you need to put it the `.yaml` file and the screenshot somewhere in the clouds... I use Dropbox for example. 
+Once you have a map you are happy with is time to **save it to a file**.
 
-Then enter to your [openFrame.io account](http://openframe.io) and click on **"Add artwork"**.
+![](imgs/03.png)
+
+And then take a screenshot of it 
+
+![](imgs/04.png)
+
+[openFrame.io](http://openframe.io) doesn't store any file for you, so you need to host this two files on the cloud your self. A great way to start is by place in it in a **public dropbox folder** and get the **Public Link** to each of this files.
+
+![](imgs/05.png)
+
+Once you have all in place is time to go to your [openFrame.io account](http://openframe.io), click on **"Add artwork"** and fill the form.
 
 ![](imgs/01.png) 
 
-Fill the values with your Name and Title of the map. In the format section choose **Other** and then specify the format as ```openframe-tangram```.
+In the format section of the form choose **Other** and then specify the format as ```openframe-tangram```.
 
-Then you need to provide the urls for the ```.yaml``` scene file and the screenshot of the map.
+Then you need to provide the urls for the Tangram ```.yaml``` scene file and the screenshot of the map.
+
+Publish it and share with others. Also let us know how it went! We are excited to see what have you done!
 
