@@ -18,7 +18,7 @@ if [ $os == "Linux" ]; then
     # sudo apt-get update
     # do we want to upgrade? this could take a damn long time.
     # sudo apt-get upgrade
-    sudo apt-get install cmake libcurl4-openssl-dev
+    sudo apt-get install -y cmake libcurl4-openssl-dev
     export CXX=/usr/bin/g++-4.9
 
     # on RaspberryPi
