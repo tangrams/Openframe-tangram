@@ -28,33 +28,29 @@ module.exports = new Extension({
             var data = fs.readFileSync(_tokens['$filepath']);
             var scene = yaml.load(data);
 
-            if (scene.scene) {
-                console.log('SCENE: ', scene.scene);
-                if (scene.scene.zoom) {
-                    console.log('ZOOM: ', scene.scene.zoom);
-                    command += ' -z ' + scene.scene.zoom;
-                }
-                if (scene.scene.tilt) {
-                    console.log('TILT: ', scene.scene.tilt);
-                    command += ' -t ' + scene.scene.tilt;
-                }
-                if (scene.scene.lon) {
-                    console.log('LON: ', scene.scene.lon);
-                    command += ' -lon ' + scene.scene.lon;
-                }
-                if (scene.scene.lat) {
-                    console.log('LAT: ', scene.scene.lat);
-                    command += ' -lat ' + scene.scene.lat;
-                }
-                if (scene.scene.rotation) {
-                    console.log('ROT: ', scene.scene.rotation);
-                    command += ' -r ' + scene.scene.rotation;
-                }
-                if (scene.scene.position) {
-                    console.log('LAT: ', scene.scene.lat);
-                    command += ' -lon ' + scene.scene.position[0] + ' -lat ' + scene.scene.position[1];
+            if (scene.cameras) {
+                console.log(scene.cameras);
+
+                for (var i in scene.cameras) {
+                    var cam = scene.cameras[i];
+                    
+                    if (cam.tilt) {
+                        console.log('TILT: ', cam.tilt);
+                        command += ' -t ' + cam.tilt;
+                    }
+                    
+                    if (cam.rotation) {
+                        console.log('ROTATION: ', cam.rotation);
+                        command += ' -r ' + cam.rotation;
+                    }
+                    
+                    if (cam.zoom) {
+                        console.log('ZOOM: ', cam.zoom);
+                        command += ' -z ' + cam.zoom;
+                    }
                 }
             }
+
             if (config.w) {
                 command += ' -w ' + config.w;
             }

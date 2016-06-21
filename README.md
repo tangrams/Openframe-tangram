@@ -55,9 +55,17 @@ Publish it and share with others. Also let us know how it went! We are excited t
 
 ## Choosing a location, zoom, tilt and rotation for your map
 
-[Tangram scene files](https://mapzen.com/documentation/tangram/Scene-file/) are designed to display maps in general, but as an artwork you probably want to pick a particular place and view. That's why I extend the official [Tangram scene file API](https://mapzen.com/documentation/tangram/Scene-file/) with a couple of variables inside the `scene` node to pick a: `position` (in longitud and latitud), `zoom` (zoom level), `rotation` (in degrees) and `tilt` (in degrees).
+[Tangram scene files](https://mapzen.com/documentation/tangram/Scene-file/) are designed to display maps in general, but as an artwork you probably want to pick a particular place from and interesting view. That's why I extend the official [camera Tangram API](https://mapzen.com/documentation/tangram/camera/) so beside choosing  the `position` (in longitud and latitud) and `zoom` (zoom level) you can pick a `rotation` (degree) and `tilt` (degree).
 
-![](imgs/06.png)
+```yaml
+cameras:
+    camera:
+        position: [-74.01321, 40.70589]
+        zoom: 16
+        tilt: 65
+        rotation: 10
+        type: perspective
+```
 
 ![](imgs/07.gif)
 
