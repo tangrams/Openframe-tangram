@@ -29,22 +29,20 @@ module.exports = new Extension({
             var scene = yaml.load(data);
 
             if (scene.cameras) {
-                console.log(scene.cameras);
-
                 for (var i in scene.cameras) {
                     var cam = scene.cameras[i];
                     
-                    if (cam.tilt) {
+                    if (cam.tilt && typeof cam.tilt === 'number') {
                         console.log('TILT: ', cam.tilt);
                         command += ' -t ' + cam.tilt;
                     }
                     
-                    if (cam.rotation) {
+                    if (cam.rotation && typeof cam.rotation === 'number') {
                         console.log('ROTATION: ', cam.rotation);
                         command += ' -r ' + cam.rotation;
                     }
                     
-                    if (cam.zoom) {
+                    if (cam.zoom && typeof cam.zoom === 'number') {
                         console.log('ZOOM: ', cam.zoom);
                         command += ' -z ' + cam.zoom;
                     }
