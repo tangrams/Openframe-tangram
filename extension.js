@@ -55,7 +55,8 @@ module.exports = new Extension({
             if (config.h) {
                 command += ' -h ' + config.h;
             }
-            command += ' -s $filepath';
+
+            command += ' -s $url';
             return command;
         },
         // how do we stop this type of artwork?
